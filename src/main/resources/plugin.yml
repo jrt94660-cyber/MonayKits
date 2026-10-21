@@ -1,0 +1,26 @@
+name: MonayKits
+version: 1.0.0
+main: com.monaysmp.monaykits.MonayKits
+api-version: '26.2'
+author: MonaySMP
+description: Kit storage, previews, cooldowns, and native Paper dialogs.
+commands:
+  monaykits:
+    description: Open and manage MonayKits.
+    aliases: [mkits, kits]
+    usage: /monaykits [set|reload|claim|preview]
+permissions:
+  monaykits.use:
+    default: true
+  monaykits.admin:
+    default: op
+  monaykits.kit.starter:
+    default: true
+  monaykits.kit.og:
+    default: false
+  monaykits.kit.comedian:
+    default: false
+  monaykits.kit.booster:
+    default: false
+  monaykits.kit.monayplus:
+    default: false
