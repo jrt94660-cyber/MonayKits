@@ -1,0 +1,32 @@
+settings:
+  title: "&b&lMONAYSMP &8» &fKits"
+  prefix: "&bMonayKits &8» "
+  bedrock-fallback: true
+  preview-includes-armor: true
+
+kits:
+  starter:
+    display-name: "&aStarter"
+    permission: "monaykits.kit.starter"
+    cooldown-seconds: 86400
+    items: []
+  og:
+    display-name: "&6OG"
+    permission: "monaykits.kit.og"
+    cooldown-seconds: 86400
+    items: []
+  comedian:
+    display-name: "&dComedian"
+    permission: "monaykits.kit.comedian"
+    cooldown-seconds: 86400
+    items: []
+  booster:
+    display-name: "&bBooster"
+    permission: "monaykits.kit.booster"
+    cooldown-seconds: 86400
+    items: []
+  monayplus:
+    display-name: "&eMonay+"
+    permission: "monaykits.kit.monayplus"
+    cooldown-seconds: 86400
+    items: []
