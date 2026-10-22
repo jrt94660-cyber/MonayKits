@@ -2,11 +2,12 @@ package com.monaysmp.monaykits;
 
 import io.papermc.paper.dialog.Dialog;
 import io.papermc.paper.event.player.PlayerCustomClickEvent;
+import io.papermc.paper.connection.PlayerGameConnection;
 import io.papermc.paper.registry.data.dialog.ActionButton;
-import io.papermc.paper.registry.data.dialog.DialogAction;
+import io.papermc.paper.registry.data.dialog.action.DialogAction;
 import io.papermc.paper.registry.data.dialog.DialogBase;
-import io.papermc.paper.registry.data.dialog.DialogBody;
-import io.papermc.paper.registry.data.dialog.DialogType;
+import io.papermc.paper.registry.data.dialog.body.DialogBody;
+import io.papermc.paper.registry.data.dialog.type.DialogType;
 import net.kyori.adventure.key.Key;
 import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
@@ -151,7 +152,8 @@ public final class MonayKits extends JavaPlugin implements Listener {
         String namespace = event.getIdentifier().namespace();
         String action = event.getIdentifier().value();
         if (!namespace.equals("monaykits")) return;
-        Player player = event.getPlayer();
+        if (!(event.getCommonConnection() instanceof PlayerGameConnection connection)) return;
+        Player player = connection.getPlayer();
         if (action.equals("close")) return;
         if (action.startsWith("claim_")) {
             claim(player, action.substring("claim_".length()));
