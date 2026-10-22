@@ -139,7 +139,7 @@ public final class MonayKits extends JavaPlugin implements Listener {
                 .base(DialogBase.builder(Component.text("MONAYSMP | KITS"))
                         .body(List.of(DialogBody.plainMessage(Component.text("Choose a kit to claim or preview. Kit access and cooldowns are checked when claiming."))))
                         .build())
-                .type(DialogType.multiAction(buttons)));
+                .type(DialogType.multiAction(buttons).build()));
         player.showDialog(dialog);
     }
 
